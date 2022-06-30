@@ -67,9 +67,13 @@
 \affiliation[]{Breast Cancer Capstone}{}
 \begin{compactitem}
 \item Neural network was designed and trained against stained lymph node slides, from the Camelyon 16 dataset, to perform image segmentation with the goal of the detection of cancerous and abnormal cell structures
-\item Cleaned, tiled, and masked the slide data and then fed it through a CNN to determine the presence of cancer and, if positive, through a custom UNet to segment it
-\item Due to insufficient data, the accuracy rate was lower than anticipated so also attempted to create additional data using pix2pix
-\item Tested both GPU and CPU based workflows for machine learning
+\item Various methods such as OTSU were used to efficiently clean, tile, and mask the slide data to reduce man hours necessary for production of a dataset as well as enhance the quality of the training set and model accuracy
+\item Convolutional Neural Network model was designed to flag images from Camelyon 16 dataset as abnormal
+\item UNet based image segmentation was performed agaisnt Camelyon 16 dataset images identified by the CNN
+\item Pix2Pix Generative Adversarial Network was used to expand the existing Camelyon 16 dataset to create more training data to feed the pipeline to enhance reliablity and accuracy by balancing positive and negative samples
+\item Both GPU and CPU computation were utilized to reduce training time and increase the velocity of development
+\item Set up and deployed a Jupyter Labs based research environment in a Docker container based on Arch Linux on a 32 core Threadripper machine with a mirror of the Camelyon 16 dataset for each team member to reduce the set up time and allow for rapid iterations
+\item Deployed the model in a flask application on Google Cloud allowing a user to upload a whole slide or just an image tile and see the prediction as well as the segmentation, if applicable
 \end{compactitem}
 
 \affiliation[]{Private Satellite Imagery}{}
