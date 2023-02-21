@@ -63,20 +63,28 @@
 % \item Created a federated learning cluster on Raspberry Pi using ArchArm , PyTorch, and PySyft
 % \item Analyzed the differences in Gaussian and Laplacian noise when used in differentiated learning on Android% using PySyft for Android
 % \end{compactitem}
+\affiliation[]{Artillery Building Damage Detection}{}
+\begin{compactitem}
+\item Deployed an automated machine learning pipeline on AWS using Docker, Nvidia Triton, DVC, MLFlow, git
+\item Utilized a convolutional neural network to locate building footprints in satellite imagery before damage
+\item Using the output of the convolutional neural network and a satellite image of the same area but having sustained damage, ResNet50 output a classification for each footprint in the image from not damaged to destroyed
+\item Incorporated satellite imagery and data from UNOSAT, xBD, and PlanetLabs to achieve a large enough dataset to train, mitigate low resolution images, and access current data
+\item Created an API using FastAPI allowing users to upload satellite images and receive annotated images with damage information without using the command line or a notebook
+\end{compactitem}
 
-\affiliation[]{Breast Cancer Capstone}{}
+\affiliation[]{Breast Cancer Detection}{}
 \begin{compactitem}
 \item Neural network was designed and trained against stained lymph node slides, from the Camelyon 16 dataset, to perform image segmentation with the goal of the detection of cancerous and abnormal cell structures
 \item Various methods such as OTSU were used to efficiently clean, tile, and mask the slide data to reduce man hours necessary for production of a dataset as well as enhance the quality of the training set and model accuracy
 \item Convolutional Neural Network model was designed to flag images from Camelyon 16 dataset as abnormal
 \item UNet based image segmentation was performed agaisnt Camelyon 16 dataset images identified by the CNN
 \item Pix2Pix Generative Adversarial Network was used to expand the existing Camelyon 16 dataset to create more training data to feed the pipeline to enhance reliablity and accuracy by balancing positive and negative samples
-\item Both GPU and CPU computation were utilized to reduce training time and increase the velocity of development
+%\item Both GPU and CPU computation were utilized to reduce training time and increase the velocity of development
 \item Set up and deployed a Jupyter Labs based research environment in a Docker container based on Arch Linux on a 32 core Threadripper machine with a mirror of the Camelyon 16 dataset for each team member to reduce the set up time and allow for rapid iterations
 \item Deployed the model in a flask application on Google Cloud allowing a user to upload a whole slide or just an image tile and see the prediction as well as the segmentation, if applicable
 \end{compactitem}
 
-\affiliation[]{Privacy Preserving Satellite Imagery}{in progress}
+\affiliation[]{Privacy Preserving Satellite Imagery}{}
 \begin{compactitem}
 \item Produced a demo for Open Mined to implement a machine federated learning model in which data owners have control of the data and the data scientists never access the raw data thereby keeping the data private whilst still allowing the end user to have meaningful results
 \item The model is trained on satellite imagery to locate pools in certain areas as a proof of concept that these methods of data privacy can be used on data of this nature
@@ -103,12 +111,12 @@
 \item Practiced compiling Arch packages for ARM so I could use Arch on the Pis
 \end{compactitem}
  
-\affiliation[]{Noise Analysis on Android}{}
-\begin{compactitem}
-\item Worked with three others to compare accuracy of local and global differential privacy using federated learning via the PySyft library
-\item Utilized Gaussian and Laplacian curves as the Lapace mechanism to analyze how the difference in noise impacted accuracy, in addition to testing without noise
-\item Tested in an Android environment using the Synthetic Digits dataset and created outcome visualizations using GraphView
-\end{compactitem}
+% \affiliation[]{Noise Analysis on Android}{}
+% \begin{compactitem}
+% \item Worked with three others to compare accuracy of local and global differential privacy using federated learning via the PySyft library
+% \item Utilized Gaussian and Laplacian curves as the Lapace mechanism to analyze how the difference in noise impacted accuracy, in addition to testing without noise
+% \item Tested in an Android environment using the Synthetic Digits dataset and created outcome visualizations using GraphView
+% \end{compactitem}
 
 % \affiliation[]{Cookbook}{In Progress}
 % \begin{compactitem}
@@ -143,7 +151,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Work History}
 
-\affiliation[]{Teamsense}{January 2022 - June 2022}
+\affiliation[Software Engineer]{Teamsense}{January 2022 - June 2022}
 \begin{compactitem}
 \item Contribute to implementation design of new features or architecture as well as implement new features, maintain existing code, and correct defects
 \item Take part in rotation to act as support engineer for the customer success team to triage bugs, oversee their resolution and ensure that defects are corrected in accordance with the contract with the client
@@ -152,7 +160,7 @@
 \item Tech Stack: Python, Django, Typescript, React, Datadog, git
 \end{compactitem}
 
-\affiliation[]{Rivers Agile}{April 2019 - January 2022}
+\affiliation[Software Consultant]{Rivers Agile}{April 2019 - January 2022}
 \begin{compactitem}
 \item Converted existing code to VueJS in order to add internationalization features to prepare for use in Europe
 \item Chased bugs, created features, and developed prototypes for real time dashboards and performance reports to showcase the efficiency of the autonomous forklifts to the clients with the goal of aiding in sales
@@ -162,7 +170,7 @@
   % websockets
 \end{compactitem}
 
-\affiliation[]{Contractor}{February 2018 - Jauary 2019}
+\affiliation[Data Analyst]{Contractor}{February 2018 - Janary 2019}
 \begin{compactitem}
 \item Collected data from the FAA pertaining to yearly flight hours per aircraft model and from the NTSB pertaining to aircraft accident data by creating working relationships with officials from both organizations
 \item Ran statistical analyses on data to define a standard metric to compare the safety of different aircraft types, determined accidents per 100,000 hours of flight was most accurate and relevant; calculated this for overall safety as well as in differing environmental conditions
@@ -172,16 +180,16 @@
 \item Tech stack: Python, Jupyter Notebooks, Golang, SQL, Matplotlib
 \end{compactitem}
 
-\affiliation[]{Nightingale Security}{October 2017 - February 2018}
+\affiliation[Software Intern]{Nightingale Security}{October 2017 - February 2018}
 \begin{compactitem}
 \item Used the bug tracker to locate and correct various bugs in the drone control UI, such as display and logic errors
 \item Created last minute fixes for UX issues in time for product demonstrations to clients and venture capitalists
-\item Designed a feature to allow the user to create bounding boxes on images which were to be fed into a machine learning algorithm which woudl then be utilized by the drone to automatically identify risks
+\item Designed a feature to allow the user to create bounding boxes on images which were to be fed into a machine learning algorithm which wouldthen be utilized by the drone to automatically identify risks
 \item Utilized agile development methods in a remote setting, including Kanban, Slack, and video conferencing
 \item Tech stack: JavaScript, PHP, Angular, GoogleMapsAPI, git
 \end{compactitem}
 
-\affiliation[]{Topographical Data Analysis}{January - April 2016}
+\affiliation[Data Analyst/Field Tech]{Topographical Data Analysis}{January - April 2016}
 \begin{compactitem}
 \item Reverse engineered the recording of data from the Tripod Data Systems Survey Pro in order to correct errors in manual entry of information into the total station and prevent the loss of a day's measurements
 \item Utilized the data from the total station to make accurate 3D images of the topography and identify systemic issues in our mapping policies including spacing and user carelessness
@@ -193,9 +201,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Education}
 
-\affiliation []{Fourth Brain}{2020}
+\affiliation []{Fourth Brain}{2020, 2022}
 \begin{compactitem}[\null]
-\item Machine Learning
+\item Machine Learning, MLOps
 \end{compactitem}
 
 \affiliation[]{LambdaSchool}{2017-2018}
