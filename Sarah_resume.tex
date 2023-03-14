@@ -21,296 +21,207 @@
 %\email{sfmajors373@gmail.com}
 \webpage{sfmajors373@gmail.com}
 \phone{(724) 683 - 5500}
-\streetaddress{140 LaVale Drive Apt 801, Monroeville, Pennsylvania 15146}
+\streetaddress{https://www.linkedin.com/in/sarah-f-majors/}
 \citystatezip{www.github.com/sfmajors373}
 \maketitle
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Overview
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Overview}
-%\goodbreak\vspace{\secskip}\par\noindent\begin{tabularx}{\linewidth}{Xr}  
-%   Hardworking and passionate learner who has studied Anthropology, Archaeology, and Geology and yearns to find an intellectually engaging career in order to continue my intellectual development.
-%\end{tabularx}
-%
+\section{Overview}
+\goodbreak\vspace{\secskip}\par\noindent\begin{tabularx}{\linewidth}{Xr}  
+  Originally an archaeologist, I have transitioned to tech and have spent my first tech jobs working in web development with a side of data analysis and data visualization.  Now I am looking to obtain a job in artificial intelligence.
+\end{tabularx}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Personal Project
+% Machine Learning Projects
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Personal Projects}
+\section{Machine Learning Projects}
 
-\affiliation[In Progress]{Lidar 3D Mapping Device}{}
+% \affiliation[]{Lidar 3D Mapping Device}{In Progress}
+% \begin{compactitem}
+% \item Utilize a compact lidar module on a custom frame to collect detailed topographical information at close range
+% \item Integrate data from individual units with the information provided by the Total Station to create site wide maps
+% \item Create detailed, accurate, user friendly, and aesthetically pleasing maps
+% \item Tech stack: QGIS, ROOT (Cern), Python, LaTeX
+% \end{compactitem}
+% 
+% \affiliation[]{8-bit Computer}{In Progress}
+% \begin{compactitem}
+% \item Building a primitive 8-bit computer with breadboards and LED's based on Ben Eater's video series
+% \item Planning PCBs to replace the breadboards for a more permanent, cat-proof arrangement
+% \item Skills developed: Electrical Engineering, Computer Hardware Basics, Troubleshooting
+% \end{compactitem}
+
+% \affiliation[]{Machine Learning Projects}{In Progress}
+% \begin{compactitem}
+% \item Breast Cancer Capstone for FourthBrain
+% \item Creating a demo of the application of privacy preserving methods to GIS in coordination with OpenMined for the United Nations
+% \item Created a federated learning cluster on Raspberry Pi using ArchArm , PyTorch, and PySyft
+% \item Analyzed the differences in Gaussian and Laplacian noise when used in differentiated learning on Android% using PySyft for Android
+% \end{compactitem}
+\affiliation[]{Artillery Building Damage Detection}{}
 \begin{compactitem}
-\item Utilize a compact spinning lidar module on a custom frame to collect detailed topographical information at close range
-\item Integrate data from individual units with the information provided by the Total Station to create site wide maps
-\item Create detailed, accurate, user friendly, and aesthetically pleasing maps
-\item Skills developed: QGIS, ROOT (Cern), Python, LaTeX
+\item Deployed an automated machine learning pipeline on AWS using Docker, Nvidia Triton, DVC, MLFlow, git
+\item Utilized a convolutional neural network to locate building footprints in satellite imagery before damage
+\item Using the output of the convolutional neural network and a satellite image of the same area but having sustained damage, ResNet50 output a classification for each footprint in the image from not damaged to destroyed
+\item Incorporated satellite imagery and data from UNOSAT, xBD, and PlanetLabs to achieve a large enough dataset to train, mitigate low resolution images, and access current data
+\item Created an API using FastAPI allowing users to upload satellite images and receive annotated images with damage information without using the command line or a notebook
 \end{compactitem}
 
-\affiliation[In Progress]{Cookbook}{}
+\affiliation[]{Breast Cancer Detection}{}
 \begin{compactitem}
-\item Compile family recipes in LaTex cookbook
-\item Skills developed: LaTex, Git
+\item Neural network was designed and trained against stained lymph node slides, from the Camelyon 16 dataset, to perform image segmentation with the goal of the detection of cancerous and abnormal cell structures
+\item Various methods such as OTSU were used to efficiently clean, tile, and mask the slide data to reduce man hours necessary for production of a dataset as well as enhance the quality of the training set and model accuracy
+\item Convolutional Neural Network model was designed to flag images from Camelyon 16 dataset as abnormal
+\item UNet based image segmentation was performed agaisnt Camelyon 16 dataset images identified by the CNN
+\item Pix2Pix Generative Adversarial Network was used to expand the existing Camelyon 16 dataset to create more training data to feed the pipeline to enhance reliablity and accuracy by balancing positive and negative samples
+%\item Both GPU and CPU computation were utilized to reduce training time and increase the velocity of development
+\item Set up and deployed a Jupyter Labs based research environment in a Docker container based on Arch Linux on a 32 core Threadripper machine with a mirror of the Camelyon 16 dataset for each team member to reduce the set up time and allow for rapid iterations
+\item Deployed the model in a flask application on Google Cloud allowing a user to upload a whole slide or just an image tile and see the prediction as well as the segmentation, if applicable
 \end{compactitem}
 
-\affiliation[In Progress]{8-bit Computer}{}
+\affiliation[]{Privacy Preserving Satellite Imagery}{}
 \begin{compactitem}
-\item Building a primitive 8-bit computer with breadboards and LED's
-\item Planning PCB's for a more permanent arrangement
-\item Skills developed: Electrical Engineering, Computer Hardware Basics, Troubleshooting
+\item Produced a demo for Open Mined to implement a machine federated learning model in which data owners have control of the data and the data scientists never access the raw data thereby keeping the data private whilst still allowing the end user to have meaningful results
+\item The model is trained on satellite imagery to locate pools in certain areas as a proof of concept that these methods of data privacy can be used on data of this nature
+\item Created reusable Docker container hosting Jupyter Labs and all necessary machine learning libraries to reduce issues related to dependency management
+\item Compiled PySyft and PyGrid packages for Arch Linux and became the maintainer of those and several other machine learning packages in the Arch User Repository
+\item Built computer to reduce dependency on expensive cloud compute and prevent runaway costs while experimenting with various models, parameters, etc as well as speed up training time
+% \item Worked on a demo intended for the United Nations that would utilize privacy preserving methods to pull data
+% from satellite imagery without the end user every actually seeing the images
 \end{compactitem}
+
+\affiliation[]{Chest X-Ray Pathology Detection}{}
+\begin{compactitem}
+\item Utilized the CheXpert dataset to develop a potential low cost solution to detect chest pathologies, such as cardiomegaly, edema and pleural effusion, deployed to Raspberry Pi via Flask with three other people
+\item Trained various models, such as VGG and Resnet, to achieve best results in given time, with VGG16 having the best results at 79.15\% accuracy rate with a 50,000 image training set
+\item Created a small flask application to deploy on Raspberry Pi to upload images and make pathology predictions
+\item Recorded video demo of the project for hackathon submission
+\end{compactitem}
+
+
+\affiliation[]{Federated Learning Cluster}{}
+\begin{compactitem}
+\item Created a federated learning computational cluster on a set of four Raspberry Pi 3s and 4s to have a platform to further explore how federated learning works
+\item Built an automated tool to create Arch Linux ARM rootfs for Raspberry Pi 3s and 4s using pacman and bash
+\item Practiced compiling Arch packages for ARM so I could use Arch on the Pis
+\end{compactitem}
+ 
+% \affiliation[]{Noise Analysis on Android}{}
+% \begin{compactitem}
+% \item Worked with three others to compare accuracy of local and global differential privacy using federated learning via the PySyft library
+% \item Utilized Gaussian and Laplacian curves as the Lapace mechanism to analyze how the difference in noise impacted accuracy, in addition to testing without noise
+% \item Tested in an Android environment using the Synthetic Digits dataset and created outcome visualizations using GraphView
+% \end{compactitem}
+
+% \affiliation[]{Cookbook}{In Progress}
+% \begin{compactitem}
+% \item Having tired of calling my mom to send me her recipes at midnight, I decided to compile them into a single space that was easily replicated and shared so my mom, my sister and I could all have a copy
+% \item Used this as an opportunity to learn more LaTex while having fun and making something I actually need
+% %\item Compile family recipes in LaTex cookbook
+% \item Tech stack: LaTex, Git
+% \end{compactitem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Field Experience
+% Continuing Education
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Field Experience}
+% \section{Continuing Education}
+% 
+% \affiliation[]{Machine Learning Fundamentals}{In Progress}
+% \begin{compactitem}
+% \item Completed the AI in Medicine Specialization by deeplearning.ai
+% \item Competing in Intel Edge AI scholarship challenge
+% \item Competing in Bertelsman AI Deep Learning scholarship challenge
+% \item Completed the Computer Vision Nano Degree from Udacity focusing on applying computer vision methods with the PyTorch and OpenCV libraries, projects include facial keypoint detection, image captioning and SLAM
+% \item Completed and won the Secure and Private AI Facebook Scholarship Challenge Course focusing on differential and federated learning using PySyft and PyTorch with a heavy emphasis on group projects coordinated in the Slack community
+% \item Completed and received certificate for the Deep Learning Specialization from deeplearning.ai covering deep neural networks, convolutional neural networks, sequence models and structuring machine learning projects
+% \item Completed Machine Learning course by deeplearning.ai and Andrew Ng using Octave
+% \item Completed the Bertelsman Data Science Challenge Scholarship Course focusing on statistics, python, and SQL
+% \item Working to enhance my math understanding through MITx and Outlier
+% \end{compactitem}
 
-\affiliation[Vero Beach, Florida]{Old Vero Ice Age Site}{February - May 2016}
-\begin{compactitem}
-\item Excavated 1x1 units in 2.5 cm and 5.0 cm units according to natural stratigraphy utilizing methods of vertical control, identifying and collecting artifacts and ecofacts in situ with all appropriate provenience information
-\item Performed detailed recording and extraction of in situ Pleistocene megafauna remains
-\item Screened all sediments removed from units via a 1/8 and 1/16 inch screen in order to collect micro debitage, pollen, insects, charcoal and other specimens, as well as analyze the minute changes in grain size and composition of the sediments
-\item Attended multiple events in order to develop public relations and raise funds as well as educate the public on the importance of the science and history of our efforts
-\item Worked with the public and volunteers as well as discussed the site methods, finds, and implications
-\item Assisted in the development of topographical maps utilizing data collected with a Spectra Precision Focus 10 Total Station with a TDS Ranger Data Collector with SurveyPro software utilizing open source software including ROOT by Cern, Python 3.5, and QGIS
-%\item Assisted in readying the site for excavation including setting up the WeatherPort, wiring the site for electricity, installing lighitng fixtures, resetting the previously made grid system, updating and repairing the previously made drainage trenches and pumps, setting up boardwalks and stairs that are within safety guidelines
-%\item Aided in the cataloging of soil samples, geological samples, artifacts, and ecofacts  by unit, strata, level, and date
-%\item Assisted with photographing the site and recording the photograph information
-\end{compactitem}
-
-\affiliation[Pennsylvania \& West Virginia]{Cultural Resource Management}{August 2015 - present}
-\begin{compactitem}
-\item Participated in Phase I \& II evaluation of various sites such as oil pipelines, well pads, stream mitigation, and large construction sites
-\item Utilized compass directions in order to create transects for testing
-\item Utilized mapping applications such as Google Earth and AutoCAD 360 to determine the appropriate locations for testing
-\item Dug shovel test pits and 1x1 test units and recorded their properties
-\item Assisted in mapping historic and industrial sites, recorded feature descriptions, and prepared site for photographs
-\end{compactitem}
-
-\affiliation[Taos, New Mexico]{Fort Burgwin}{Summer 2010}
-\begin{compactitem}
-\item Participated in the excavation of the laundresses' quarters at Fort Burgwin.
-\item Excavated one meter units, including collecting Constant Volume Samples, creating topographical maps, and photographing.
-\item Assisted in the lab by cleaning, organizing, and recording artifacts.
-\item Water screened additional soil samples from units which were not intended for hydrogen peroxide processing.
-\end{compactitem}
-
-\affiliation[Freedom, Pennsylvania]{Vicary Mansion}{2006-2007}
-\begin{compactitem}
-\item Engaged in excavations under the front porch with the intention of determining the boundaries of the previous front porch.
-\item Cored and analyzed geological samples collected from the area surrounding the house.
-\end{compactitem}
-
-\affiliation[Butler, Pennsylvania]{Hamilton Bottle Plant}{2004-2007}
-\begin{compactitem}
-\item Participated in the salvage excavation at the Hamilton Bottle Plant with the Dirt Dragon organization lead by Dr. Edmund Dlutowski.
-\item Learned the fundamentals of archaeology including sorting and cleaning artifacts, the basics about the use of maps in archaeology, the fundamentals on the background research required for archaeologists, and lab skills.
-\end{compactitem}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Lab and Research Experience
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Lab and Research Experience}
-\affiliation[Conference Field Trip]{Society of American Archaeology}{Spring 2016}
-\begin{compactitem}
-\item Assisted in hosting the SAA field trip to the Old Vero site while I was working there by detailed cleaning and labeling of the units and stratigraphy in order to be visual references during the lecture on the history, geology, and current work with the site
-\item Assisted participants with at'latl demonstration and instruction
-\end{compactitem}
-
-\affiliation[Student Attendee]{Society of Applied Anthropology}{Spring 2015}
-\begin{compactitem}
-\item Attended the Society For Applied Anthropology
-\item Participated in Workshop for working towards a career in anthropology
-\end{compactitem}
-
-\affiliation[Student Attendee]{Society of Pennsylvania Archaeology}{Spring 2012}
-\begin{compactitem}
-\item Attended the annual conference for the Society of Pennsylvania Archaeology.
-\end{compactitem}
-
-\affiliation[Culminating Project in Historic Archaeology Course]{HABS, HAER}{Spring 2010}
-\begin{compactitem}
-\item Completed the Historic American Buildings Survey for 556 East Ninth Street, Erie, Pennsylvania 16503.
-\end{compactitem}
-
-%\affiliation[Tom Ridge Envrironmental Center]{Exhibit Preparation}{2007-2011}
-%\begin{compactitem}
-%\item Assisted in the set up of displays sponsored by Mercyhurst University at the Tom Ridge Environmental Center, including transporting and assembling large geological and paleontological displays.
-%\end{compactitem}
-
-\affiliation[Mercyhurst Archaeological Institute]{Conservation Lab}{2011}
-\begin{compactitem}
-\item Assisted in stabilizing waterlogged pieces of wood recovered from Jordan using refrigeration and impregnating the pieces with Polyethelyne Glycol
-\item Used specific calculations to determine the amount of each strength of PEG to create the appropriate solution when the water needed changed
-\item Also used observational data to determine if additives are needed to prevent mold growth
-\item Recorded the data on the adjustments to solutions and the progress of impregnation
-\end{compactitem}
-
-\affiliation[Mercyhurst Archaeological Institute]{Processing Lab}{2007-2008, 2010}
-\begin{compactitem}
-\item Participated in the analysis of Constant Volume Samples from the Gault site in Texas excavated by previous students, including processing by hydrogen peroxide.
-\item Cleaned and labelled artifacts.
-\item Recorded artifacts in databases.
-\item Supervised the lab for two terms, including recording all lab information in the F1 notes.
-\end{compactitem}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Memberships
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Memberships}
-%
-%\affiliation[]{Academic Organizations}{Current}
-%\begin{compactitem}
-%%\item American Anthropology Association 
-%\item Society for American Archaeology
-%\item Society of Pennsylvania Archaeology 
-%\item American Association for the Advancement of Science 
-%\end{compactitem}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% College Clubs
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{College Clubs}
-
-%\affiliation[]{Relevant College Organizations}{2007-2012}
-%\begin{compactitem}
-%\item Anthropology Club
-%\item Geology Club
-%\end{compactitem}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Relevant Coursework
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Relevant Coursework}
-
-%\affiliation[]{Archaeology, Geology, and Language Courses}{College and High School}
-%\begin{compactitem}
-%\item World Cultures, Physical Anthropology, Archaeology, Historic Archaeology Methods, Far Eastern Prehistory, Field Methods, Field School, Paleoanthropology 1 \& 2, Primitive Technologies, Perishables Analysis, Archaeological Theory, Research %Design, Geoarchaeology
-%\item Physical Geology, Historic Geology, Sedimentation, Stratigraphy
-%\item Russian 1-4, German 1-4, Spanish 1-2, French 1-2, Latin 1, Chinese 1
-%\end{compactitem}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Work History
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Professional Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Work History}
 
-\affiliation[Intern]{Nightingale Security}{November 2017 - January 2018}
+\affiliation[Software Engineer]{Teamsense}{January 2022 - June 2022}
 \begin{compactitem}
-\item Fixed bugs in the user interface and implemented minor features
-\item Worked with AngularJS, JavaScript, PHP
+\item Contribute to implementation design of new features or architecture as well as implement new features, maintain existing code, and correct defects
+\item Take part in rotation to act as support engineer for the customer success team to triage bugs, oversee their resolution and ensure that defects are corrected in accordance with the contract with the client
+\item Tested and compared new hardware options for devs to be able to work more efficiently with fewer restrictions due to compute power
+\item Researched various dashboard software options, contacted representatives from the ones most closely suiting company needs and presented the information to the team
+\item Tech Stack: Python, Django, Typescript, React, Datadog, git
 \end{compactitem}
 
-\affiliation[Instructor]{LabRatz}{August 2016 - July 2017}
+\affiliation[Software Consultant]{Rivers Agile}{April 2019 - January 2022}
 \begin{compactitem}
-\item Instructed classes of elementary and middle school aged children in after school and summer science programs including chemistry, biology, and physics
-\item Utilized methods such as project based learning to aid children in the development of critical thinking skills and critical evaluation
+\item Converted existing code to VueJS in order to add internationalization features to prepare for use in Europe
+\item Chased bugs, created features, and developed prototypes for real time dashboards and performance reports to showcase the efficiency of the autonomous forklifts to the clients with the goal of aiding in sales
+\item Participated in planning meetings for new software projects in which there was integration with other teams in order to fully understand customer needs from the product and then created user stories from that perspective
+\item Participated in architectural planning meetings for new projects and tested different technologies by creating rapid prototypes and discussing the pros and cons of different approaches
+\item Tech Stack: Python, Plot.ly, Django, RabbitMQ, MQTT, VueJS, node, selenium, i18n, Docker, Vagrant, Gitea
+  % websockets
 \end{compactitem}
 
-\affiliation[Field Excavator]{Florida Atlantic University}{February 2016 - May 2016}
+\affiliation[Data Analyst]{Contractor}{February 2018 - Janary 2019}
 \begin{compactitem}
-\item Conducted Phase III excavation Old Vero Ice Age site under the direction of Dr. James Adovasio, D.Sc. and Dr. Andy Hemmings, Ph.D. utilizing the excavation methods developed at University of Pittsburgh and Mercyhurst University
-\item Prepared units for photographing, profile and topographical mapping among various other tasks and responsibilities
+\item Collected data from the FAA pertaining to yearly flight hours per aircraft model and from the NTSB pertaining to aircraft accident data by creating working relationships with officials from both organizations
+\item Ran statistical analyses on data to define a standard metric to compare the safety of different aircraft types, determined accidents per 100,000 hours of flight was most accurate and relevant; calculated this for overall safety as well as in differing environmental conditions
+\item Created and deployed a website in Golang to display the metrics, which were graphed using Matplotlib
+\item Recorded detailed methods regarding the statistical analysis to ensure reproducibility and accountability
+\item Created a bot to scrape the NTSB database and alert subscribed twitter users to when a final report was released
+\item Tech stack: Python, Jupyter Notebooks, Golang, SQL, Matplotlib
 \end{compactitem}
 
-\affiliation[Field Tech]{Christine Davis Consultants}{September 2015 - present}
+\affiliation[Software Intern]{Nightingale Security}{October 2017 - February 2018}
 \begin{compactitem}
-\item Conducted Phase I \& Phase II evaluations for various sites in Western Pennsylvania and West Virginia including pipelines, well pads, stream mitigation, and construction sites
-\item Prepared sites for photographing and aided in their mapping
+\item Used the bug tracker to locate and correct various bugs in the drone control UI, such as display and logic errors
+\item Created last minute fixes for UX issues in time for product demonstrations to clients and venture capitalists
+\item Designed a feature to allow the user to create bounding boxes on images which were to be fed into a machine learning algorithm which wouldthen be utilized by the drone to automatically identify risks
+\item Utilized agile development methods in a remote setting, including Kanban, Slack, and video conferencing
+\item Tech stack: JavaScript, PHP, Angular, GoogleMapsAPI, git
 \end{compactitem}
 
-\affiliation[Field Tech]{GAI Consultants}{August 2015}
+\affiliation[Data Analyst/Field Tech]{Topographical Data Analysis}{January - April 2016}
 \begin{compactitem}
-\item Conduct Phase I evaluations for oil pipeline
-\item Recorded data for test pits and historic features
-\item Mapped historic, industrial site
+\item Reverse engineered the recording of data from the Tripod Data Systems Survey Pro in order to correct errors in manual entry of information into the total station and prevent the loss of a day's measurements
+\item Utilized the data from the total station to make accurate 3D images of the topography and identify systemic issues in our mapping policies including spacing and user carelessness
+\item Tech stack: QGIS, ROOT (CERN), Python, LaTeX
 \end{compactitem}
 
-\affiliation[Specimen Technician]{Quest Diagnostics, Greentree, Pa}{December 2014 - July 2015}
-\begin{compactitem}
-\item Process all specimens coming into the lab, ensuring patient data is correct, making the appropriate aliquots of specimens and directing them to the correct testing department.
-\item Learned new software specifically designed for this company, upheld high standards for accuracy and efficiency.
-\end{compactitem}
-
-%\affiliation[Opththalmology Tech]{Zambelli Cataract and Laser Eye Institute, Rochester, PA}{May 2014 - December 2014}
-%\begin{compactitem}
-%\item Assist the doctor, administer tests and drops, perform the initial evaluation including getting visions, applanation tension, field of vision and history.
-%\item Answered multiple line phones, scheduled appointments, and typed letters and dictations for referring doctors and patients.
-%\item Utilized Navinet to confirm patients' insurance.
-%\end{compactitem}
-
-%\affiliation[Inventory Specialist]{RGIS, Erie, PA}{January - May 2014}
-%\begin{compactitem}
-%\item Accurately and efficiently counted and recorded product information and quantities.
-%\item Became a supervisor which included running small inventories, managing a small team, creating reports, interacting and coordinating with store managers.
-%\end{compactitem}
-
-%\affiliation[Team Member and Quilt Instructor]{Jo Ann Fabrics, Cranberry Township and Erie, PA}{October 2008-December 2013}
-%\begin{compactitem}
-%\item Ran register, cut fabric, set up plan-o-grams, stocked merchandise, worked back-stock, executed price changes, customer assistance, assist with two store remodels.
-%\item Taught quilt classes to adults and children and promoted the stores' education program, demonstrated store products and techniques.
-%\end{compactitem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Education
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Education}
+\section{Education}
 
-%\affiliation [Diploma]{Lambda School}{2017}
-%\begin{compactitem}
-%\item Computer Science 
-%\end{compactitem}
-
-%\affiliation [Bachelors of Arts in Anthropology]{Mercyhurst University}{in progress}
-%\begin{compactitem}
-%\item Concentration in Archaeology
-%\item Minor in Geology
-%\end{compactitem}
-
-%\affiliation [Diploma]{Freedom Area High School}{2007}
-%\begin{compactitem}
-%\item Salutatorian
-%\end{compactitem}
-
-%\affiliation [Certificate]{National Occupational Testing Institute}{2007}
-%\begin{compactitem}
-%\item Administrative Assistant
-%\end{compactitem}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% References
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\section{References}
-
-
-\affiliation[]{Andy Hemmings}{since 2015}
-\begin{compactitem}
-\item Florida Atlantic University
-\item (620) 757-4111
+\affiliation []{Fourth Brain}{2020, 2022}
+\begin{compactitem}[\null]
+\item Machine Learning, MLOps
 \end{compactitem}
 
-
-\affiliation[]{Greg Land}{since 2014}
-\begin{compactitem}
-\item GSE Computers
-\item (717)201-7012
+\affiliation[]{LambdaSchool}{2017-2018}
+\begin{compactitem}[\null]
+\item Computer Science
 \end{compactitem}
+% \begin{compactitem}
+% \item Completed the full time 6 month computer science course through Lambda School
+% \item Learned data structures, algorithms, front end, back end, middleware, and databases
+% \item Tech stack: JavaScript, React, Express, Node.js, MongoDB, Docker, Kubernetes
+% \item Completed an additional 5 week full time course specializing in Java backend
+% \item Tech stack: Java, Spring, Maven, RabbitMQ, SQLite, Swagger
+% \end{compactitem}
 
-\affiliation []{Jillian Miller}{since 2011}
-\begin{compactitem}
-\item Former Manager at Jo Ann Fabrics Erie, Pa
-\item (724) 699-9748
+\affiliation []{Mercyhurst University}{}
+\begin{compactitem}[\null]
+\item Bachelors of Science in Anthropology
 \end{compactitem}
-
-\affiliation []{Johnathan Miller}{since 2013}
-\begin{compactitem}
-\item Supervisor at RGIS
-\item (814)835-8177
-\end{compactitem}
-
-%\affiliation[]{Fred Martin}{since 2013}
-%\begin{compactitem}
-%\item Regional Manager at RGIS
-%\item (814)835-8177
-%\end{compactitem}
 
 
 \end{document}
