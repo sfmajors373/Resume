@@ -36,6 +36,31 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sensor Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sensor Fusion Projects}
+
+\affiliation[Domains: C++, Computer Vision, Lidar, Sensor Fusion]{Time To Collision Calculator}{Class Project}
+\begin{compactitem}
+\item Utilize OpenCV to calculate a time to collision with lidar and with computer vision
+\item Experiment with various combinations of feature detection and keypoint matching to understand various characteristics of each including speed and number of matches found
+\item Analyze the differences in results of both lidar and CV TTC to see the limitations in the approach implemented
+\end{compactitem}
+
+\affiliation[Domains: C++, Lidar]{Lidar Obstacle Detection}{Class Project}
+\begin{compactitem}
+\item Utilized the Point Cloud Library to visualize and cluster real life point clouds in sequential frames
+\end{compactitem}
+
+\affiliation[Domains: Machine Learning]{GraphSlam}{Class Project}
+\begin{compactitem}
+\item Learn basic 2D Landmark Detection and Tracking
+\item Practice utilizing Kalman Filters, probability, linear algebra and learn basic motion models
+\end{compactitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Machine Learning Projects
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,6 +88,7 @@
 % \item Created a federated learning cluster on Raspberry Pi using ArchArm , PyTorch, and PySyft
 % \item Analyzed the differences in Gaussian and Laplacian noise when used in differentiated learning on Android% using PySyft for Android
 % \end{compactitem}
+
 \affiliation[Domains: Computer Vision, Deployment, DevOps, MLOps]{Artillery Building Damage Detection}{}
 \begin{compactitem}
 \item Deployed an automated machine learning pipeline on AWS using Docker, Nvidia Triton, DVC, MLFlow, git
@@ -72,51 +98,51 @@
 \item Created an API using FastAPI allowing users to upload satellite images and receive annotated images with damage information without using the command line or a notebook
 \end{compactitem}
 
-\affiliation[Domains: Computer Vision, Deployment]{Breast Cancer Detection}{}
-\begin{compactitem}
-\item Neural network was designed and trained against stained lymph node slides, from the Camelyon 16 dataset, to perform image segmentation with the goal of the detection of cancerous and abnormal cell structures
-\item Various methods such as OTSU were used to efficiently clean, tile, and mask the slide data to reduce man hours necessary for production of a dataset as well as enhance the quality of the training set and model accuracy
-\item Convolutional Neural Network model was designed to flag images from Camelyon 16 dataset as abnormal
-\item UNet based image segmentation was performed agaisnt Camelyon 16 dataset images identified by the CNN
-\item Pix2Pix Generative Adversarial Network was used to expand the existing Camelyon 16 dataset to create more training data to feed the pipeline to enhance reliablity and accuracy by balancing positive and negative samples
-\item Both GPU and CPU computation were utilized to reduce training time and increase the velocity of development
-\item Set up and deployed a Jupyter Labs based research environment in a Docker container based on Arch Linux on a 32 core Threadripper machine with a mirror of the Camelyon 16 dataset for each team member to reduce the set up time and allow for rapid iterations
-\item Deployed the model in a flask application on Google Cloud allowing a user to upload a whole slide or just an image tile and see the prediction as well as the segmentation, if applicable
-\end{compactitem}
+% \affiliation[Domain: C++, Computer Vision]{C++ MNIST Neural Net}{}
+% \begin{compactitem}
+% \item Utilized Torch and OpenCV to create a neural network to train on the MNIST dataset
+% \item User could upload an appropriately sized image from the command line and the network makes a prediction of the numeral
+% \end{compactitem}
 
-\affiliation[Domains: Computer Vision, Privacy Enhancing Technologies]{Privacy Preserving Satellite Imagery}{}
-\begin{compactitem}
-\item Produced a demo for Open Mined to implement a machine federated learning model in which data owners have control of the data and the data scientists never access the raw data thereby keeping the data private whilst still allowing the end user to have meaningful results
-\item The model is trained on satellite imagery to locate pools in certain areas as a proof of concept that these methods of data privacy can be used on data of this nature
-\item Created reusable Docker container hosting Jupyter Labs and all necessary machine learning libraries to reduce issues related to dependency management
-\item Compiled PySyft and PyGrid packages for Arch Linux and became the maintainer of those and several other machine learning packages in the Arch User Repository
-\item Built computer to reduce dependency on expensive cloud compute and prevent runaway costs while experimenting with various models, parameters, etc as well as speed up training time
-% \item Worked on a demo intended for the United Nations that would utilize privacy preserving methods to pull data
-% from satellite imagery without the end user every actually seeing the images
-\end{compactitem}
+% \affiliation[Domains: Computer Vision, Deployment]{Breast Cancer Detection}{}
+% \begin{compactitem}
+% \item Neural network was designed and trained against stained lymph node slides, from the Camelyon 16 dataset, to perform image segmentation with the goal of the detection of cancerous and abnormal cell structures
+% \item Various methods such as OTSU were used to efficiently clean, tile, and mask the slide data to reduce man hours necessary for production of a dataset as well as enhance the quality of the training set and model accuracy
+% \item Convolutional Neural Network model was designed to flag images from Camelyon 16 dataset as abnormal
+% \item UNet based image segmentation was performed agaisnt Camelyon 16 dataset images identified by the CNN
+% \item Pix2Pix Generative Adversarial Network was used to expand the existing Camelyon 16 dataset to create more training data to feed the pipeline to enhance reliablity and accuracy by balancing positive and negative samples
+% \item Both GPU and CPU computation were utilized to reduce training time and increase the velocity of development
+% \item Set up and deployed a Jupyter Labs based research environment in a Docker container based on Arch Linux on a 32 core Threadripper machine with a mirror of the Camelyon 16 dataset for each team member to reduce the set up time and allow for rapid iterations
+% \item Deployed the model in a flask application on Google Cloud allowing a user to upload a whole slide or just an image tile and see the prediction as well as the segmentation, if applicable
+% \end{compactitem}
 
-\affiliation[Domains: Computer Vision, ML Deployment]{Chest X-Ray Pathology Detection}{}
-\begin{compactitem}
-\item Utilized the CheXpert dataset to develop a potential low cost solution to detect chest pathologies, such as cardiomegaly, edema and pleural effusion, deployed to Raspberry Pi via Flask with three other people
-\item Trained various models, such as VGG and Resnet, to achieve best results in given time, with VGG16 having the best results at 79.15\% accuracy rate with a 50,000 image training set
-\item Created a small flask application to deploy on Raspberry Pi to upload images and make pathology predictions
-\item Recorded video demo of the project for hackathon submission
-\end{compactitem}
+% \affiliation[Domains: Computer Vision, Privacy Enhancing Technologies]{Privacy Preserving Satellite Imagery}{}
+% \begin{compactitem}
+% \item Produced a demo for Open Mined to implement a machine federated learning model in which data owners have control of the data and the data scientists never access the raw data thereby keeping the data private whilst still allowing the end user to have meaningful results
+% \item The model is trained on satellite imagery to locate pools in certain areas as a proof of concept that these methods of data privacy can be used on data of this nature
+% \item Created reusable Docker container hosting Jupyter Labs and all necessary machine learning libraries to reduce issues related to dependency management
+% \item Compiled PySyft and PyGrid packages for Arch Linux and became the maintainer of those and several other machine learning packages in the Arch User Repository
+% \item Built computer to reduce dependency on expensive cloud compute and prevent runaway costs while experimenting with various models, parameters, etc as well as speed up training time
+% % \item Worked on a demo intended for the United Nations that would utilize privacy preserving methods to pull data
+% % from satellite imagery without the end user every actually seeing the images
+% \end{compactitem}
+
+% \affiliation[Domains: Computer Vision, ML Deployment]{Chest X-Ray Pathology Detection}{}
+% \begin{compactitem}
+% \item Utilized the CheXpert dataset to develop a potential low cost solution to detect chest pathologies, such as cardiomegaly, edema and pleural effusion, deployed to Raspberry Pi via Flask with three other people
+% \item Trained various models, such as VGG and Resnet, to achieve best results in given time, with VGG16 having the best results at 79.15\% accuracy rate with a 50,000 image training set
+% \item Created a small flask application to deploy on Raspberry Pi to upload images and make pathology predictions
+% \item Recorded video demo of the project for hackathon submission
+% \end{compactitem}
 
 
 \affiliation[Domains: Privacy Enhancing Technologies, Federated Machine Learning, ARM]{Federated Learning Cluster}{}
 \begin{compactitem}
 \item Created a federated learning computational cluster on a set of four Raspberry Pi 3s and 4s to have a platform to further explore how federated learning works
-\item Built an automated tool to create Arch Linux ARM rootfs for Raspberry Pi 3s and 4s using pacman and bash
-\item Practiced compiling Arch packages for ARM so I could use Arch on the Pis
+% \item Built an automated tool to create Arch Linux ARM rootfs for Raspberry Pi 3s and 4s using pacman and bash
+% \item Practiced compiling Arch packages for ARM so I could use Arch on the Pis
 \end{compactitem}
  
-\affiliation[Domains: Machine Learning]{GraphSlam}{Udacity Project}
-\begin{compactitem}
-\item Learn basic 2D Landmark Detection and Tracking
-\item Practice utilizing Kalman Filters, probability, linear algebra and learn basic motion models
-\end{compactitem}
-
 % \affiliation[]{Noise Analysis on Android}{}
 % \begin{compactitem}
 % \item Worked with three others to compare accuracy of local and global differential privacy using federated learning via the PySyft library
@@ -137,31 +163,31 @@
 % C++ Mini Learning Projects
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{C++ Projects}
+% \section{C++ Projects}
 
-\affiliation[Domain: C++, Computer Vision]{C++ MNIST Neural Net}{}
-\begin{compactitem}
-\item Utilized Torch and OpenCV to create a neural network to train on the MNIST dataset
-\item User could upload an appropriately sized image from the command line and the network makes a prediction of the numeral
-\end{compactitem}
+% \affiliation[Domain: C++, Computer Vision]{C++ MNIST Neural Net}{}
+% \begin{compactitem}
+% \item Utilized Torch and OpenCV to create a neural network to train on the MNIST dataset
+% \item User could upload an appropriately sized image from the command line and the network makes a prediction of the numeral
+% \end{compactitem}
 
-\affiliation[Domain: C++ basics]{C++ htop Replica}{Udacity Project}
-\begin{compactitem}
-\item Practiced reading in data and making classes by tracking memory and CPU usage as well as active processes
-\item Practiced printing data to the terminal and utilizing a premade library to display the data
-\end{compactitem}
+% \affiliation[Domain: C++ basics]{C++ htop Replica}{Udacity Project}
+% \begin{compactitem}
+% \item Practiced reading in data and making classes by tracking memory and CPU usage as well as active processes
+% \item Practiced printing data to the terminal and utilizing a premade library to display the data
+% \end{compactitem}
+% 
+% \affiliation[Domain: C++ basics]{C++ Traffic Simulation}{Udacity Project}
+% \begin{compactitem}
+% \item Practiced classes, private and public methods, and various basics to create a very basic traffic simulation
+% \item Guided project with some premade code for visualization
+% \end{compactitem}
 
-\affiliation[Domain: C++ basics]{C++ Traffic Simulation}{Udacity Project}
-\begin{compactitem}
-\item Practiced classes, private and public methods, and various basics to create a very basic traffic simulation
-\item Guided project with some premade code for visualization
-\end{compactitem}
-
-\affiliation[Domain: C++ basics]{C++ Memory Management "Chatbot"}{Udacity Project}
-\begin{compactitem}
-\item Practiced the Rule of Five, exclusive ownership, and smart pointers to make a mini chatbot
-\item Guided project with some premade code for visualization
-\end{compactitem}
+% \affiliation[Domain: C++ basics]{C++ Memory Management "Chatbot"}{Udacity Project}
+% \begin{compactitem}
+% \item Practiced the Rule of Five, exclusive ownership, and smart pointers to make a mini chatbot
+% \item Guided project with some premade code for visualization
+% \end{compactitem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Continuing Education
@@ -236,29 +262,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Education
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Education}
-
-\affiliation []{Fourth Brain}{2020, 2022}
-\begin{compactitem}[\null]
-\item Machine Learning, MLOps
-\end{compactitem}
-
-\affiliation[]{LambdaSchool}{2017-2018}
-\begin{compactitem}[\null]
-\item Computer Science
-\end{compactitem}
-% \begin{compactitem}
-% \item Completed the full time 6 month computer science course through Lambda School
-% \item Learned data structures, algorithms, front end, back end, middleware, and databases
-% \item Tech stack: JavaScript, React, Express, Node.js, MongoDB, Docker, Kubernetes
-% \item Completed an additional 5 week full time course specializing in Java backend
-% \item Tech stack: Java, Spring, Maven, RabbitMQ, SQLite, Swagger
+% \section{Education}
+% 
+% \affiliation []{Fourth Brain}{2020, 2022}
+% \begin{compactitem}[\null]
+% \item Machine Learning, MLOps
 % \end{compactitem}
-
-\affiliation []{Mercyhurst University}{}
-\begin{compactitem}[\null]
-\item Bachelors of Science in Anthropology
-\end{compactitem}
+% 
+% \affiliation[]{LambdaSchool}{2017-2018}
+% \begin{compactitem}[\null]
+% \item Computer Science
+% \end{compactitem}
+% % \begin{compactitem}
+% % \item Completed the full time 6 month computer science course through Lambda School
+% % \item Learned data structures, algorithms, front end, back end, middleware, and databases
+% % \item Tech stack: JavaScript, React, Express, Node.js, MongoDB, Docker, Kubernetes
+% % \item Completed an additional 5 week full time course specializing in Java backend
+% % \item Tech stack: Java, Spring, Maven, RabbitMQ, SQLite, Swagger
+% % \end{compactitem}
+% 
+% \affiliation []{Mercyhurst University}{}
+% \begin{compactitem}[\null]
+% \item Bachelors of Science in Anthropology
+% \end{compactitem}
 
 
 \end{document}
